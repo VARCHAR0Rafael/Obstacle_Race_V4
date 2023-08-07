@@ -7,13 +7,15 @@ public class Scorer : MonoBehaviour
     int score = 0;
     private void OnCollisionEnter(Collision collision)
     {
-        
-        ScoreCounter();
-    }
+        if (collision.gameObject.tag != "Ground")
+        {
+            if (collision.gameObject.tag != "Hitted")
+            {
+                score += 1;
+                Debug.Log("You hit something this times: " + score);
+                //Debug.Log(collision.gameObject.name);
 
-    void ScoreCounter()
-    {
-        score += 1;
-        Debug.Log("You hit something this times: " + score);
+            }
+        }
     }
 }

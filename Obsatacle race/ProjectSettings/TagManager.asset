@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hitted
   - Ground
+  - Drop
   layers:
   - Default
   - TransparentFX

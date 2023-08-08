@@ -23,15 +23,6 @@ public class Dropper : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            GetComponent<MeshRenderer>().material.color = Color.red;
-            gameObject.tag = "Hitted";
-        }
-    }
-
     void InvisibleStart()
     {
         rendererView = GetComponent<MeshRenderer>();
